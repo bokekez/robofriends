@@ -74,7 +74,7 @@ class App extends Component {
 			return <h1>Loading</h1>
 		}
 	else {
-	if (filterRobotsName == '')
+	if (filterRobotsName === '')
 	{
 		return(
 			<div className='tc'>	
