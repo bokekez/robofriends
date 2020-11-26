@@ -60,7 +60,11 @@ class App extends Component {
 				// robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase()),
 
 				// robots.email.toLowerCase().includes(this.state.searchfield.toLowerCase())	
+			else{
+				return '';
+			}
 		})
+		
 		// const filterRobots = this.state.robots.filter(robots => {
 		// 	return robots.email.toLowerCase().includes(this.state.searchfield.toLowerCase());	
 		// })
