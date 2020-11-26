@@ -68,13 +68,25 @@ class App extends Component {
 		// const filterRobots = this.state.robots.filter(robots => {
 		// 	return robots.email.toLowerCase().includes(this.state.searchfield.toLowerCase());	
 		// })
-		if (this.state.robots.lenght === 0)
+	if (this.state.robots.lenght === 0)
 		{ 
 			// return <h1>Loading</h1>
 			return <h1>Loading</h1>
 		}
-		else {
+	else {
+	if (filterRobotsName == '')
+	{
 		return(
+			<div className='tc'>	
+				<h1 className='f1'>RoboFriends</h1>
+				<SearchBox searchChange={this.onSearchChange}/>
+				<Scroll>
+					<p1>Search found no robots</p1>
+				</Scroll>
+			</div>
+			)
+	}else {		
+	return(
 		<div className='tc'>	
 			<h1 className='f1'>RoboFriends</h1>
 			<SearchBox searchChange={this.onSearchChange}/>
@@ -86,7 +98,7 @@ class App extends Component {
 		</div>
 		);
 	}
-	
+	}
 	}
 }
 
